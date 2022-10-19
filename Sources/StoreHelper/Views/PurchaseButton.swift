@@ -18,7 +18,12 @@ public struct PurchaseButton: View {
     
     var productId: ProductId
     var price: String
-    
+
+    public init(productId: ProductId, price: String) {
+        self.productId = productId
+        self.price = price
+    }
+
     public var body: some View {
         
         let product = storeHelper.product(from: productId)
