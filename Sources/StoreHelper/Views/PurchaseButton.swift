@@ -19,8 +19,8 @@ public struct PurchaseButton: View {
     var productId: ProductId
     var price: String
 
-    public init(purchaseState: PurchaseState, productId: ProductId, price: String) {
-        self.purchaseState = purchaseState
+    public init(purchaseState: Binding<PurchaseState>, productId: ProductId, price: String) {
+        self._purchaseState = purchaseState
         self.productId = productId
         self.price = price
     }
